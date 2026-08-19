@@ -1,4 +1,6 @@
 class testing{
-  RanNum generator = new RanNum();
-  System.out.println(generator.getNumber());
+  public static void main(String[] args) {
+    IPv4Gen addr = new IPv4Gen();
+    System.out.println(addr.generate());
+  }
 }
