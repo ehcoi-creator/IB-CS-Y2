@@ -4,8 +4,8 @@ import java.util.ArrayList;
 public class dns {
     private String hostname;
 
-    private ArrayList<String> hostnames = new ArrayList<>(Arrays.asList("localhost", "google.com", "example.com"));
-    private ArrayList<String> ips = new ArrayList<>(Arrays.asList(" 127.0.0.1", "142.250.72.14", "7.7.7.7"));
+    protected ArrayList<String> hostnames = new ArrayList<>(Arrays.asList("localhost", "google.com", "example.com"));
+    protected ArrayList<String> ips = new ArrayList<>(Arrays.asList("127.0.0.1", "142.250.72.14", "7.7.7.7"));
 
     public dns(String hostnameInput) {
         hostname = hostnameInput;
