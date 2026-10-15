@@ -1,0 +1,13 @@
+# push to main
+git add .
+git commit -m "update"
+git push origin main
+
+# add quiz to mb
+
+## Quiz 
+### Code
+```.java
+```
+### Work
+![](images/)
