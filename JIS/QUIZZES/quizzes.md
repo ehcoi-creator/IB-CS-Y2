@@ -653,3 +653,19 @@ class ADC{
 ```
 ### Work
 ![](images/16.png)
+
+## Quiz 17
+Encapsulation in computer networks refers to the packet switching process where each of the network layers adds and encapsulates information in order to successfully send it to another PC.
+
+## Quiz 18
+VPN, virtual private network, refers to the process of virtually connecting two PC directly to each other, ensuring secure and private encrypted information transfers. One fundamental technology required is tunneling, where data is sent by hiding it inside another data packet.
+
+## Quiz 19
+The application layer network allows web pages to communicate over the internet. One example is HTTP, Hypertext Transfer Protocol. This allows web browsers to send and receive HTML files.
+
+
+## Quiz 20
+Data validation is required. It refers to checking whether all of the data is consistent in terms of variable types. This is needed because if String or boolean data is in the numerical database, using it as expected (numerically) could cause a data type error, causing a program to crash. To prevent this, all data in the database should go through a data validation process.
+
+## Quiz 21
+Data processing includes categorizing, mathematical analysis, and application of the analysed data. The data could be categorized based on classes and grades to present more specific circumstances. Finding the median and IQR, Q1, and Q3 enables outlier identification. Omitting them when making prediction when mean of median. This is because outliers could produce inaccurate predictions off the trend. This data cleaning would increase the accuracy of the ML model.
