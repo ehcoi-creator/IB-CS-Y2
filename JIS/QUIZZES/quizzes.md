@@ -669,3 +669,12 @@ Data validation is required. It refers to checking whether all of the data is co
 
 ## Quiz 21
 Data processing includes categorizing, mathematical analysis, and application of the analysed data. The data could be categorized based on classes and grades to present more specific circumstances. Finding the median and IQR, Q1, and Q3 enables outlier identification. Omitting them when making prediction when mean of median. This is because outliers could produce inaccurate predictions off the trend. This data cleaning would increase the accuracy of the ML model.
+
+## Quiz 22
+Data preprocessing includes categorization, mathematical analysis, and cleaning and organizing the data before applying it to ML. The data could be categorized based on classes and grades to present more specific circumstances. Finding the median and IQR, Q1, and Q3 enables outlier identification. Omitting the outliers found from the analyses could enhance the accuracy of the ML because outliers could distort the data distribution and produce inaccurate predictions that deviate from the actual trend. This data cleaning would increase the accuracy of the ML model by improving the database to have consistent quality.
+
+## Quiz 23
+Dimensionality reduction refers to the process of reducing the number of features in a database. Filtering could be used for fast and easy selection of data features at the database data processing stage. Irrelevant data features could be filtered manually before being used to tain the ML model. During the process between the database and ML, a wrapper reduction method could be used to find the best number of dimensions to train the ML model through multiple combinations and testing, but it would cost extra computational resources since more training is required.
+
+## Quiz 24
+K-NN technique refers to categorizing data into pre-existing categories in a database using its distance to the nearest data points. The k-NN data points closest to the new data point become its category. K-fold refers to the number of different trials conducted to test the model's performance and generalization ability, potentially preventing overfitting. This works because the database is divided into several folds, and the model is trained using different folds for several tests. This ensures that every data point is used and the ML model produces consistent results for each fold.
