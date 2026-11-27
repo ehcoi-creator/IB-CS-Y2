@@ -775,3 +775,46 @@ class Quiz27 {
 ```
 ### Work
 <img width="970" height="71" alt="Screenshot 2026-11-27 at 16 46 03" src="https://github.com/user-attachments/assets/abccc848-28b4-49f5-9330-4ebc3da85bd9" />
+
+## Quiz 28
+
+## Quiz 29
+### Work
+```.java
+
+
+class Quiz29 {
+    public static void main(String[] args) {
+        int[][] A = {
+            {05,102,100},
+            {103,99,103},
+            {101,98,104}
+        };
+
+        int[][] k = {
+            {0,-1,0},
+            {-1,5,-1},
+            {0,-1,0}
+        };
+
+        int[][] out = convoluteSingle(A, k);
+
+        System.out.println(out[1][1]);
+    }
+
+    public static int[][] convoluteSingle(int[][] A, int[][]k) {
+        int[][] out = new int[A.length][A[0].length];
+
+        for (int row = 0; row < 3; row++) {
+            for (int col = 0; col < 3; col++) {
+                out[1][1] += A[row][col]*k[row][col];
+            }
+        }
+
+        return out;
+    }
+}
+```
+
+### Work
+<img width="277" height="25" alt="Screenshot 2026-11-27 at 16 58 32" src="https://github.com/user-attachments/assets/16d1c256-5d3e-4004-9a1e-6cb9d29e2bc9" />
