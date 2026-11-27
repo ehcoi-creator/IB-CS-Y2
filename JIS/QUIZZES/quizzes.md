@@ -678,3 +678,100 @@ Dimensionality reduction refers to the process of reducing the number of feature
 
 ## Quiz 24
 K-NN technique refers to categorizing data into pre-existing categories in a database using its distance to the nearest data points. The k-NN data points closest to the new data point become its category. K-fold refers to the number of different trials conducted to test the model's performance and generalization ability, potentially preventing overfitting. This works because the database is divided into several folds, and the model is trained using different folds for several tests. This ensures that every data point is used and the ML model produces consistent results for each fold.
+
+## Quiz 25
+
+## Quiz 26
+
+## Quiz 27
+### Code
+```.java
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Arrays;
+import java.util.Scanner;
+
+class Quiz27 {
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner file = new Scanner(new File("irisProcessed.txt"));  //used established mass dataset for testing.
+
+        int[][] dataset = new int[2][150];
+        int lastIndex = 0;
+
+        while (file.hasNextLine()){
+            String Line = file.nextLine().trim();
+            String[] array = Line.split(",");
+
+            dataset[0][lastIndex] = (int) Double.parseDouble(array[0]);
+            dataset[1][lastIndex] = (int) Double.parseDouble(array[1]);
+
+            lastIndex++;
+        }
+
+
+        System.out.println(Arrays.toString(findMinDistanceToClosestCentroid(10, dataset)));
+    }
+
+    public static int[] findMinDistanceToClosestCentroid(int k, int[][] values) {
+        k = (int) (Math.random()*5) + 1; //the number of centroides is less or equal to 5.
+
+        int smallestX = values[0][0];
+        int biggestX = values[0][0];
+        int smallestY = values[1][0];
+        int biggestY = values[1][0];
+        
+
+        for (int i = 0; i < values[0].length; i++) {
+            if (values[0][i] < smallestX) {
+                smallestX = values[0][i];
+            }
+            if (values[0][i] > biggestX) {
+                biggestX = values[0][i];
+            }
+            if (values[1][i] < smallestY) {
+                smallestY = values[1][i];
+            }
+            if (values[1][i] > biggestY) {
+                biggestY = values[1][i];
+            }
+        }
+
+
+        int[][] centroides = new int[2][k];
+
+        for (int i = 0; i < k; i++) {
+            centroides[0][i] = (int) (Math.random()*(biggestX - smallestX + 1) + smallestX);
+            centroides[1][i] = (int) (Math.random()*(biggestY - smallestY + 1) + smallestY);
+        }
+
+        int[] label = new int[values[0].length];
+
+        int[] distance = new int[k];
+
+        for (int i=0; i<values[0].length; i++){
+            for (int j=0; j<k; j++){
+                distance[j] = (int) Math.pow(
+                    Math.pow(values[0][i]-centroides[0][j], 2)+Math.pow(values[1][i]-centroides[1][j] , 2)
+                    , 0.5                    
+                );
+            }
+
+            int smallest = distance[0];
+
+            for (int num : distance) {
+                if (num < smallest){
+                    smallest = num;
+                }
+            }
+
+            label[i] = smallest;
+        }
+
+        return label;
+    }
+
+}
+```
+### Work
+<img width="970" height="71" alt="Screenshot 2026-11-27 at 16 46 03" src="https://github.com/user-attachments/assets/abccc848-28b4-49f5-9330-4ebc3da85bd9" />
